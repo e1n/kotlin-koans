@@ -5,7 +5,11 @@ fun forLoop(collection: Collection<String>) {
 
     for (s in collection) {}
 
-    for ((index, s) in collection.withIndex()) {}
+    for ((index, s) in collection.withIndex()) {println("$index => $s")}
+}
+
+fun main(args: Array<String>) {
+    breakStuff()
 }
 
 fun iteratingOverMap(map: Map<Int, String>) {
@@ -34,5 +38,15 @@ fun labels() {
             }
         }
     }
+}
+
+fun breakStuff() {
+    free@ while(true) {
+        for (i in 1..30) {
+            println("processing $i")
+            if (i == 14) break@free
+        }
+    }
+    println("I po wszystkim !")
 }
 

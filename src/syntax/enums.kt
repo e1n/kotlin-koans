@@ -23,3 +23,11 @@ enum class ProtocolState {
 
     abstract fun signal() : ProtocolState
 }
+
+fun main(args: Array<String>) {
+    for (c in Color.values()) {
+        println(c)
+    }
+
+    Color.values().filter { c -> c != Color.RED }.forEach { c-> println(c) }
+}

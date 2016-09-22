@@ -24,6 +24,10 @@ fun fullSyntacticFormOfFunctionLiterals() {
     1.extensionLambda(2) // == 3
 }
 
+fun two (a: Int, b: Int): Int = a + b;
+fun three(a: Int, b: Int, c: Int): (Int, Int) -> Int = ::two
+
+
 fun closure(): Int {
     var counter = 0
     fun increment() {
@@ -33,4 +37,8 @@ fun closure(): Int {
         increment()
     }
     return counter
+}
+
+fun main(args: Array<String>) {
+    println("Res: ${closure()}")
 }

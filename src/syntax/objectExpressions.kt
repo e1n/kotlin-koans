@@ -24,5 +24,5 @@ fun functionLiteral() {
     val runnable = Runnable {
         // ...
     }
-    YourOldJavaCodeUsingRunnable.run(runnable)
+    YourOldJavaCodeUsingRunnable.run({ println("terefere") })
 }

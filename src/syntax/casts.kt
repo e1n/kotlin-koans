@@ -1,6 +1,6 @@
 package syntax.casts
 
-fun foo(a: Any?) {
+fun foo(a: Any?): Unit {
     if (a is String) {
         val s = a
     }
